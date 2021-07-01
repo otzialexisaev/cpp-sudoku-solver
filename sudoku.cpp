@@ -2,41 +2,9 @@
 #include <iterator>
 #include <algorithm>
 #include <vector>
+#include "Row.h"
+//#include "CellsContainer.h"
 using namespace std;
-
-//struct Row {
-//	int* cells;
-//	bool oneEmptySpace() {
-//		int empty{ 0 };
-//		for (size_t i = 0; i < 9; i++)
-//		{
-//			if (cells[i] == 0) {
-//				empty++;
-//			}
-//			//std::cout << cells[i];
-//		}
-//		//std::cout << std::count(std::begin(cells), std::end(cells), 0);
-//		if (empty == 1) {
-//			return true;
-//		}
-//		return false;
-//	}
-//
-//	bool insertLastDigit() {
-//		for (int i = 1; i <= 9; i++)
-//		{
-//			int* check = find(cells, cells + 9, i);
-//			if (check != cells + 9) {
-//				cout << i << " was found" << endl;
-//			}
-//			else {
-//				*check - 1 = i;
-//				cout << i << " was not found" << endl;
-//			}
-//		}
-//		return true;
-//	}
-//};
 
 //bool oneEmptySpace(vector<int> cells);
 //bool insertLastDigit(vector<int> &cells);
@@ -46,6 +14,8 @@ vector<int*> getCells();
 int main()
 {
 	vector<int*> cells = getCells();
+	Row row1{ cells };
+	row1.print();
 	//bool check = oneEmptySpace(cells);
 	//insertLastDigit(cells);
 	//printCells(cells);
@@ -96,21 +66,6 @@ bool insertLastDigit(vector<int> &cells) {
 }
 
 
-bool oneEmptySpace(vector<int> cells) {
-	int empty{ 0 };
-	for (int i = 0; i < cells.size(); i++)
-	{
-		if (cells[i] == 0) {
-			empty++;
-		}
-		//std::cout << cells[i];
-	}
-	//std::cout << std::count(std::begin(cells), std::end(cells), 0);
-	if (empty == 1) {
-		return true;
-	}
-	return false;
-}
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"

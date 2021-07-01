@@ -139,7 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CellsContainer.cpp" />
+    <ClCompile Include="Row.cpp" />
     <ClCompile Include="sudoku.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CellsContainer.h" />
+    <ClInclude Include="Row.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
